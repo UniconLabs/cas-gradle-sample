@@ -1,0 +1,26 @@
+{
+  "@class" : "org.jasig.cas.services.RegexRegisteredService",
+  "serviceId" : "http://localhost:8888/.*",
+  "name" : "localhost test",
+  "id" : 358549885406883,
+  "description" : "this is a test client",
+  "evaluationOrder" : 1,
+  "logoutType" : "BACK_CHANNEL",
+  "attributeReleasePolicy" : {
+    "@class" : "org.jasig.cas.services.ReturnAllAttributeReleasePolicy",
+    "principalAttributesRepository" : {
+      "@class" : "org.jasig.cas.authentication.principal.DefaultPrincipalAttributesRepository",
+      "expiration" : 2,
+      "timeUnit" : [ "java.util.concurrent.TimeUnit", "HOURS" ]
+    },
+    "authorizedToReleaseCredentialPassword" : false,
+    "authorizedToReleaseProxyGrantingTicket" : false
+  },
+  "accessStrategy" : {
+    "@class" : "org.jasig.cas.services.TimeBasedRegisteredServiceAccessStrategy",
+    "enabled" : true,
+    "ssoEnabled" : true,
+    "requireAllAttributes" : false,
+    "caseInsensitive" : false
+  }
+}
