@@ -1,3 +1,13 @@
+apply from: 'https://raw.github.com/akhikhl/gretty/master/pluginScripts/gretty.plugin'
+
+gretty {
+    httpEnabled = false
+    httpsEnabled = true
+    jvmArgs = [
+            "-Dservice.registry.config.location=file://${project.file('etc/cas/services')}"
+    ]
+}
+
 task wrapper(type: Wrapper) {
     gradleVersion = project."gradle.version"
 }

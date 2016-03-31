@@ -7,11 +7,11 @@ repositories {
 }
 
 dependencies {
-    runtime("org.jasig.cas:cas-server-webapp:${project.'cas.version'}@war") {
+    runtime("org.jasig.cas:cas-management-webapp:${project.'cas.version'}@war") {
         transitive = true
     }
 }
 
 war {
-    baseName 'cas'
+    baseName 'cas-management'
 }
