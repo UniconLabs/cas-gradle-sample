@@ -7,6 +7,9 @@ repositories {
 }
 
 dependencies {
+    compile group: 'org.jasig.cas', name: 'cas-server-support-ldap', version: project."cas.version"
+    compile group: 'com.hazelcast', name: 'hazelcast-all', version: project."hazelcast.version"
+
     runtime("org.jasig.cas:cas-server-webapp:${project.'cas.version'}@war") {
         transitive = true
     }
