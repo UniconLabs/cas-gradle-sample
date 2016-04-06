@@ -24,7 +24,7 @@ task wrapper(type: Wrapper) {
     gradleVersion = project."gradle.version"
 }
 
-task generateKey() {
+task generateKey << {
     int keySize = project.hasProperty('size') ? size.toInteger() : 512
     println "generating key of size ${keySize} (to change, pass `-Psize=int` where `int` is the size)"
     def octetKey = OctJwkGenerator.generateJwk(keySize)
