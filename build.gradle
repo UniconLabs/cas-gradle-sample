@@ -16,7 +16,8 @@ gretty {
     httpEnabled = false
     httpsEnabled = true
     jvmArgs = [
-            "-Dservice.registry.config.location=file://${project.file('etc/cas/services')}"
+            "-Dservice.registry.config.location=file://${project.file('etc/cas/services')}",
+            "-Dorg.eclipse.jetty.annotations.maxWait=240"
     ]
 }
 
